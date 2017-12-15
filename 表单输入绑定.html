@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单输入绑定</title>
+    <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 文本 -->
+        <!--<input v-model="message" placeholder="edit me">
+        <p>Message is: {{ message }}</p>-->
+
+        <!-- 多行文本显示 -->
+        <span>Multiline message is:</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="add multiple lines"></textarea>
+
+        <!-- 复选框 -->
+        <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: '',
+                checked:''
+            }
+        })
+    </script>
+</body>
+</html>
